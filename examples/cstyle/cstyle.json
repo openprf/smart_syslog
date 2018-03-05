@@ -1,0 +1,8 @@
+{"ModuleList":[
+  { "name":"cStyle1",
+    "levels":["debug", "info", "warnings"]},
+  { "name":"cStyle2",
+    "levels":["crit", "error", "alert", 9]},
+  { "name":"cStyle3",
+    "levels":[7, 1, 6]}
+]}
