@@ -70,7 +70,7 @@ const ModuleLogger * smart_syslog_get_module(const SmartLoggerConfig *log_config
  * @param format            log message
  * @param ...               list of parametrs
  */
-void smart_syslog_log(ModuleLogger *logger, unsigned int log_level, char *format, ...);
+void smart_syslog_log(const ModuleLogger *logger, unsigned int log_level, const char *format, ...);
 
 /**
  * Write message to syslog with a parameter list.
@@ -80,7 +80,7 @@ void smart_syslog_log(ModuleLogger *logger, unsigned int log_level, char *format
  * @param format            log message
  * @param ap               va_list of parametrs
  */
-void smart_syslog_log_va_list(ModuleLogger *logger, unsigned int log_level, char *format, va_list ap);
+void smart_syslog_log_va_list(const ModuleLogger *logger, unsigned int log_level, const char *format, va_list ap);
 #ifdef __cplusplus
 }
 #endif

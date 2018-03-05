@@ -217,7 +217,7 @@ const ModuleLogger * smart_syslog_get_module(const SmartLoggerConfig *log_config
     return NULL;
 }
 
-void smart_syslog_log(ModuleLogger *logger, unsigned int log_level, char *format, ...)
+void smart_syslog_log(const ModuleLogger *logger, unsigned int log_level, const char *format, ...)
 {
     if(!logger || !format)
         return;
@@ -228,7 +228,7 @@ void smart_syslog_log(ModuleLogger *logger, unsigned int log_level, char *format
     va_end(ap);
 }
 
-void smart_syslog_log_va_list(ModuleLogger *logger, unsigned int log_level, char *format, va_list ap)
+void smart_syslog_log_va_list(const ModuleLogger *logger, unsigned int log_level, const char *format, va_list ap)
 {
     if(!logger || !format)
         return;

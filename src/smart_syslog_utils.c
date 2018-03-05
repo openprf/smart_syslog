@@ -73,7 +73,7 @@ unsigned int upToMask(unsigned int log_level) {
     return mask;
 }
 
-unsigned int getLogLevelFromTest(char *text)
+unsigned int getLogLevelFromTest(const char *text)
 {
     if(!text)
         return 0;

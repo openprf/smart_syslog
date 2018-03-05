@@ -36,6 +36,6 @@ char* logLevelToString(unsigned int log_level);
 
 unsigned  int upToMask(unsigned int log_level);
 
-unsigned int getLogLevelFromTest(char *text);
+unsigned int getLogLevelFromTest(const char *text);
 
 #endif //SMART_SYSLOG_UTILS_H

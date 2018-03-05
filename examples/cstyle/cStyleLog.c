@@ -10,7 +10,7 @@ SmartLoggerConfig* g_log_config = NULL;
 
 
 void log1(){
-    ModuleLogger* module = smart_syslog_get_module(g_log_config, "cStyle1"); //Получение модуля логирования по имени
+    const ModuleLogger* module = smart_syslog_get_module(g_log_config, "cStyle1"); //Получение модуля логирования по имени
     printf("Log 1 module 0x%X\n", module);
 
     char test[] = "log test";
@@ -20,7 +20,7 @@ void log1(){
 }
 
 void log2(){
-    ModuleLogger* module = smart_syslog_get_module(g_log_config, "cStyle2");
+    const ModuleLogger* module = smart_syslog_get_module(g_log_config, "cStyle2");
     printf("Log 2 module 0x%X\n", module);
 
     smart_syslog_log(module, LOG_ERR, "Error level %d", LOG_ERR);
@@ -30,7 +30,7 @@ void log2(){
 }
 
 void log3(){
-    ModuleLogger* module = smart_syslog_get_module(g_log_config, "cStyle3");
+    const ModuleLogger* module = smart_syslog_get_module(g_log_config, "cStyle3");
     printf("Log 3 module 0x%X\n", module);
 
     smart_syslog_log(module, LOG_ALERT, "lert level %d", LOG_ALERT);
