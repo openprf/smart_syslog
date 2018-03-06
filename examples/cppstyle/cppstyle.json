@@ -1,0 +1,10 @@
+{"ModuleList":[
+  { "name":"CppStyleLog",
+    "upto": 5,
+    "levels":["debug", "info"]},
+  { "name":["CppStyleChild", "CppStyleChild2"],
+    "levels":["debug", 1]},
+  { "name":"CppStyleLog2",
+    "upto": "debug"}
+]
+}
